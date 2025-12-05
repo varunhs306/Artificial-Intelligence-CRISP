@@ -9,6 +9,10 @@ CRISP-DM - The Cross-Industry Standard Process for Data Mining- A Project built 
 
 ## Data Source
 
-Data is fetched directly from the NSE API for the required indices and date ranges and processed in-memory. The pipeline applies lightweight data‑mining steps such as cleaning, resampling, basic feature extraction (returns, moving averages, volatility) and labeling, with reproducible processing tracked for auditability.
+Data is fetched using the [yfinance](https://github.com/ranaroussi/yfinance) API, a popular open-source Python library that provides a reliable and Pythonic way to download historical market data from Yahoo Finance.
+
+The pipeline applies lightweight data-mining steps such as cleaning, resampling, basic feature extraction (returns, moving averages, volatility) and labeling, with reproducible processing tracked for auditability.
+
+📦 **GitHub Repository**: [https://github.com/ranaroussi/yfinance](https://github.com/ranaroussi/yfinance)
 
 
