@@ -1,3 +1,9 @@
 numpy
 pandas
 seaborn
+matplotlib
+scikit-learn
+yfinance
+tensorflow
+xgboost
+ta
