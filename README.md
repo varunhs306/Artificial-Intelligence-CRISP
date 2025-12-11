@@ -1,18 +1,48 @@
-# Artificial-Intelligence-CRISP
-CRISP-DM - The Cross-Industry Standard Process for Data Mining- A Project built using AI models
+# NASDAQ Trend Prediction using CRISP-DM
 
-## About the Authors
+A machine learning project to predict NASDAQ index trends using the CRISP-DM methodology.
 
-- Varun H Shamaraju — Data scientist and AI practitioner focused on building end-to-end ML solutions using CRISP-DM. Varun leads data preparation, modeling experiments, and evaluation workflows. Interests: predictive modeling, feature engineering, and model interpretability.
+## Overview
 
-- Swaroop K — Machine learning engineer with experience in deploying ML pipelines and automating data workflows. Swaroop focuses on reproducible experiments, MLOps practices, and scalable model deployment. Interests: production ML, CI/CD for models, and model monitoring.
+- **Objective**: Predict next-day NASDAQ trend (up/down)
+- **Data**: 10 years of NASDAQ (^IXIC) data via [yfinance](https://github.com/ranaroussi/yfinance)
+- **Models**: Random Forest, XGBoost, LSTM
 
-## Data Source
+## Data
 
-Data is fetched using the [yfinance](https://github.com/ranaroussi/yfinance) API, a popular open-source Python library that provides a reliable and Pythonic way to download historical market data from Yahoo Finance.
+| Metric | Value |
+|--------|-------|
+| Date Range | Dec 2015 - Dec 2025 |
+| Total Samples | 2,513 trading days |
+| After Cleaning | 2,463 samples |
+| Features | 27 (technical indicators, lag features) |
 
-The pipeline applies lightweight data-mining steps such as cleaning, resampling, basic feature extraction (returns, moving averages, volatility) and labeling, with reproducible processing tracked for auditability.
+- No missing values in raw OHLCV data
+- 50 rows removed after feature engineering (NaN from rolling windows)
 
-📦 **GitHub Repository**: [https://github.com/ranaroussi/yfinance](https://github.com/ranaroussi/yfinance)
+## Model Results
 
+| Model | Accuracy | F1 Score |
+|-------|----------|----------|
+| Random Forest | 42.6% | 0.072 |
+| XGBoost | 46.3% | 0.227 |
+| **LSTM** | **58.6%** | **0.739** |
 
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+## Project Structure
+
+```
+├── Fin_dashboard.ipynb   # Main analysis notebook
+├── requirements.txt      # Dependencies
+└── README.md
+```
+
+## Authors
+
+- Varun H Shamaraju
+- Swaroop K
