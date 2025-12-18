@@ -45,4 +45,4 @@ pip install -r requirements.txt
 ## Authors
 
 - Varun H Shamaraju
-- Swaroop K
+- Swaroop K Manjunathaswamy
