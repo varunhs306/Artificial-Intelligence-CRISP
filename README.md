@@ -129,6 +129,5 @@ jupyter notebook notebooks/02_Modeling_Evaluation.ipynb
 
 ## Authors
 
-**Varun H Shamaraju, Swaroop K**
-
-*Project follows CRISP-DM methodology for systematic data science workflow*
+- Varun H Shamaraju
+- Swaroop K Manjunathaswamy
